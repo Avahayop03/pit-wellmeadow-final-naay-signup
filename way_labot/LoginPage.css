@@ -1,0 +1,174 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: beige;
+    
+}
+
+
+.container {
+    position: relative;
+    width: 410px;
+    height: 420px;
+    background: seagreen;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: height .2s ease;
+
+}
+
+.container.active {
+    height: 520px;
+}
+
+.container .formBox {
+    width: 100%;
+    padding: 40px;
+}
+
+
+.container .formBoxReg {
+    position: absolute;
+    transition: none;
+    translate: 400px;
+}
+
+
+.container.active .formBoxLogin{
+    transition: none;
+    translate: -400px;
+}
+
+.container.active .formBoxReg{
+    transition: translate .18s ease;
+    translate: 0;
+}
+.container .formBoxLogin{
+    transition: translate .18s ease;
+    translate: 0;
+}
+
+
+
+form h1{
+    font-size: 2rem;
+    text-align: center;
+    padding:30px;
+}
+
+form .inputBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin: 15px 0;
+
+}
+
+.inputBox input {
+    width: 80%; /* Adjust width as needed */
+    height: 100%; /* Adjust height as needed */
+    background: transparent;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, .1);
+    padding: 10px 45px 10px 20px; /* Added padding for better input field appearance */
+    color: #fff;
+
+}
+
+.inputBox input::placeholder {
+    color:#fff;
+}
+
+/*.inputBox .icon {
+    position: absolute;
+    right: 65px;
+    bottom: 62.5%;
+    translate: 0-50%;
+   
+}
+
+
+.inputBox .icon2 {
+    position: absolute;
+    right: 65px;
+    top: 49.5%;
+    translate: 0-50%;
+   
+}
+*/
+
+
+form .rememberForgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 30px 50px 0;
+}
+
+.rememberForgot label input {
+    accent-color: #fff;
+    margin-right: 5px;
+    cursor: pointer;
+    
+}
+
+.rememberForgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.rememberForgot a:hover {
+    text-decoration: underline;
+}
+
+form button {  
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    width: 80%; /* Adjust width as needed */
+    height: 45px;
+    margin: 15px 0; /* Adjust margin to match the inputBox */
+    margin-left: auto; /* Align button to the right edge of the container */
+    margin-right: auto; /* Align button to the left edge of the container */
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+form .registerLink {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    text-align: center;
+    margin: 30px 100px 0;
+}
+
+.registerLink p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.registerLink a:hover {
+    text-decoration: underline;
+}
